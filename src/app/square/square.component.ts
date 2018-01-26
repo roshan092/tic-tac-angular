@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {BoardService} from '../board.service';
 
 @Component({
   selector: 'app-square',
@@ -6,9 +7,9 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./square.component.css']
 })
 export class SquareComponent implements OnInit {
-  @Input() value: String;
+  @Input() index: Integer;
 
-  constructor() {
+  constructor(public boardService: BoardService) {
   }
 
   ngOnInit() {

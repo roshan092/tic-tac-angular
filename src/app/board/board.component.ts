@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {BoardService} from '../board.service';
 
 @Component({
   selector: 'app-board',
@@ -6,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./board.component.css']
 })
 export class BoardComponent implements OnInit {
-  status: String = 'Next player: X';
-  squares: String[] = Array(9).fill(0, 0, 9);
-  constructor() { }
+
+  constructor(public boardService: BoardService) {
+  }
 
   ngOnInit() {
   }
